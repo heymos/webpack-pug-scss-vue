@@ -1,1 +1,8 @@
-const header = require("./components/header/header.vue")
+import header from "./components/header/header.vue"
+
+new Vue ({
+
+  el: "app",
+  
+
+});

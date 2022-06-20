@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
-  mode: "production",
+  mode: "development",
 
   entry: {
     index: path.resolve(__dirname, "src/index.js")
@@ -28,11 +28,13 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
           use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
+            'vue-style-loader',
+            'css-loader'
+            // 'style-loader',
+            // 'css-loader',
+            // 'sass-loader'
           ]
       }
     ]
@@ -45,5 +47,11 @@ module.exports = {
     }),
     new VueLoaderPlugin()
   ],
+
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  }
 
 }
