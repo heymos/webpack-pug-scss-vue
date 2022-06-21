@@ -1,13 +1,7 @@
-<template>
-
-  <div>
-    <h1>Test</h1>
-  </div>
-
-</template>
+<template lang="pug" src="./header.pug"></template>
  
 <style lang="scss" src="./header.scss"></style>
  
 <script>
-  console.log("test")
+  console.log("header")
 </script>

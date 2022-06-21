@@ -28,14 +28,17 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
           use: [
             'vue-style-loader',
-            'css-loader'
             // 'style-loader',
-            // 'css-loader',
-            // 'sass-loader'
+            'css-loader',
+            'sass-loader'
           ]
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
       }
     ]
   },
@@ -50,8 +53,8 @@ module.exports = {
 
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
-  }
+      vue: "vue/dist/vue.esm-bundler.js"
+    },
+  },
 
 }

@@ -1,8 +1,18 @@
-import header from "./components/header/header.vue"
+// import * as Vue from 'vue'
+// import App from './components/header/header.vue'
 
-new Vue ({
+const { createApp, h } = require('vue');
+// const App = require("./components/header/header.vue")
+import App from './components/app/app.vue'
 
-  el: "app",
-  
+// let Vue = require("vue")
+// let App = require("./components/header/header.vue")
 
+// const app = Vue.createApp(App)
+// app.mount('#app')
+
+const app  = createApp({
+  render: ()=>h(App),
 });
+
+app.mount("#app")
