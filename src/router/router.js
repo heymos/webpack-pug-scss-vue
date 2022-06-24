@@ -1,7 +1,7 @@
 const VueRouter = require('vue-router');
 
-import Index from "../pages/indexPage.vue";
-import Profile from "../pages/profilePage.vue";
+import Dashboard from "../pages/dashboard.vue";
+import Profile from "../pages/profile.vue";
 
 
 export default new VueRouter.createRouter({
@@ -9,7 +9,7 @@ export default new VueRouter.createRouter({
   routes: [
     {
       path: "/",
-      component: Index
+      component: Dashboard
     },
     {
       path: "/profile",

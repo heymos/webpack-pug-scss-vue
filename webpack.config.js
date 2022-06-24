@@ -1,6 +1,7 @@
 const path = require("path")
-const { VueLoaderPlugin } = require('vue-loader')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { DefinePlugin }  = require("webpack");
+const { VueLoaderPlugin } = require("vue-loader")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 
@@ -12,14 +13,15 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index.js"
+    filename: "index.js",
+    assetModuleFilename: "[name][ext]"
   },
 
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: "vue-loader",
       },
       {
         test: /\.js$/,
@@ -30,15 +32,19 @@ module.exports = {
       {
         test: /\.scss$/,
           use: [
-            'vue-style-loader',
+            "vue-style-loader",
             // 'style-loader',
-            'css-loader',
-            'sass-loader'
+            "css-loader",
+            "sass-loader"
           ]
       },
       {
         test: /\.pug$/,
-        loader: 'pug-plain-loader'
+        loader: "pug-plain-loader"
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|webp)$/i,
+        type: "asset/resource"
       }
     ]
   },
@@ -48,13 +54,18 @@ module.exports = {
       filename: "index.html",
       template: "src/index.html"
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new DefinePlugin({
+      BASE_URL: "'./'",
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false
+    }),
   ],
 
-  resolve: {
-    alias: {
-      vue: "vue/dist/vue.esm-bundler.js"
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     vue: "vue/dist/vue.esm-bundler.js"
+  //   },
+  // },
 
 }

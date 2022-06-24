@@ -1,6 +1,6 @@
 <template lang="pug">
-div
-  h1 Profile Page
+.sidebar
+  h2="It's interesting"
 </template>
  
 <style lang="scss">
@@ -8,5 +8,4 @@ div
 </style>
  
 <script>
-  console.log("Profile Page")
 </script>

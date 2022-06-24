@@ -1,0 +1,33 @@
+{
+  "navigation_items": [
+    {
+      "name": "Dashboard",
+      "img": "dashboard.svg",
+      "display": ""
+    },
+    {
+      "name": "Blog",
+      "img": "blog.svg",
+      "display": "unavailable-page"
+    },
+    {
+      "name": "Profile",
+      "img": "profile.svg",
+      "display": "profile"
+    }
+  ],
+  "navigation_items2": [
+    {
+        "name": "test_db",
+        "img": "dashboard.svg"
+    },
+    {
+        "name": "test_db",
+        "img": "blog.svg"
+    },
+    {
+        "name": "test_db",
+        "img": "profile.svg"
+    }
+  ]
+}

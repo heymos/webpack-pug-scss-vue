@@ -1,12 +1,13 @@
 <template lang="pug">
-div
-  h1 Index Page
+.profile
+  h1= "Profile Page"
 </template>
  
 <style lang="scss">
-
+h1 {
+  font-size: 20px
+}
 </style>
  
 <script>
-  console.log("Index Page")
 </script>
