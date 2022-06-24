@@ -7,30 +7,7 @@
   p="{{navigation_current_item.name}}"
 </template>
  
-<style lang="scss">
-
-.navigation-item {
-  padding: 10px 30px;
-  
-  &:hover {
-    background: #5765e0;
-  }
-
-  & p {
-    font: 300 14px/20px 'Poppins', sans-serif;
-  }
-  
-  &:hover p {
-    color: #fff;
-  }
-
-  & img {
-    float: left;
-    margin-right: 10px;
-  }
-}
-
-</style>
+<style lang="scss" src="./navigation-item.scss"></style>
 
 <script>
 
@@ -41,9 +18,12 @@ export default {
   methods: {
     routePage (pageName) {
       this.$router.push("/" + pageName );
-      console.log(pageName);
+      console.log(this.$route.fullPath);
+    },
+    itemActive (pageName) {
+      return "/" + pageName == this.$route.fullPath? true : false;
     }
   },
 }
 
-</script>
+</script> 

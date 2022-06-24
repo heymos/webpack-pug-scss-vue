@@ -16,18 +16,34 @@
       "display": "profile"
     }
   ],
-  "navigation_items2": [
-    {
-        "name": "test_db",
-        "img": "dashboard.svg"
-    },
-    {
-        "name": "test_db",
-        "img": "blog.svg"
-    },
-    {
-        "name": "test_db",
-        "img": "profile.svg"
-    }
-  ]
+  "sidebar_containers": {
+    "posts": [
+      {
+          "date": "today",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+          "date": "yesterday",
+          "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+          "date": "2 days ago",
+          "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      }
+    ],
+    "users": [
+      {
+          "name": "Mary Jane Watson",
+          "img": "dashboard.svg"
+      },
+      {
+          "name": "Rosaline Dazle",
+          "img": "blog.svg"
+      },
+      {
+          "name": "Alexandr Lovikov",
+          "img": "profile.svg"
+      }
+    ]
+  }
 }

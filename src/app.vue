@@ -1,7 +1,8 @@
 <template lang="pug">
 .inner
   navigation
-  router-view
+  .main
+    router-view
   sidebar
 </template>
  
@@ -15,17 +16,37 @@
   box-sizing: border-box;
   font-size: 0;
 
+  p, h1, h2, h3, button {
+    font: 500 14px/20px 'Poppins', sans-serif;
+  }
+
   body {
     background: #f7fbfe;
 
     .inner {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      position: relative;
       max-width: 1920px;
       height: 100vh;
-      display: grid;
-      grid-template-columns: 250px 1fr 300px;
-      margin-right: 100px;
+      margin: 0 100px 0 250px;
+
+      .main {
+        padding: 0 35px 0 65px;
+      }
     }
   }
+}
+
+h1 {
+  font-size: 20px
+}
+
+.wrap {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background: #fff;
 }
 
 </style>
@@ -42,6 +63,9 @@ export default {
   components: {
     navigation,
     sidebar,
+  },
+  async mounted () {
+    this.$store.dispatch("fetchData")
   }
 }
 

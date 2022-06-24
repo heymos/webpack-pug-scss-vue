@@ -1,6 +1,6 @@
 <template lang="pug">
 .dashboard
-  h1= "Dashboard"
+  h1= "This page is not available yet"
 </template>
  
 <style lang="scss">

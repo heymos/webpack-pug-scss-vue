@@ -1,7 +1,8 @@
 const VueRouter = require('vue-router');
 
-import Dashboard from "../pages/dashboard.vue";
+import Dashboard from "../pages/dashboard/dashboard.vue";
 import Profile from "../pages/profile.vue";
+import UnavailablePage from "../pages/unavailable-page.vue";
 
 
 export default new VueRouter.createRouter({
@@ -14,6 +15,10 @@ export default new VueRouter.createRouter({
     {
       path: "/profile",
       component: Profile
+    },
+    {
+      path: "/unavailable-page",
+      component: UnavailablePage
     }
   ]
 })

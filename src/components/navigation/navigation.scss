@@ -1,0 +1,13 @@
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background: #fff;
+  
+  & .navigation__logo {
+    padding: 30px;
+    text-align: center;
+  }
+}
