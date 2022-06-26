@@ -1,3 +1,65 @@
 .sidebar {
-  margin-top: 130px;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-top: 130px;
+    }
+  }
+
+  .wrap {
+    padding: 0;
+  }
+
+  .sidebar-container {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    .sidebar-container__title {
+      padding: 10px 20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      color: #fff;
+      font: 400 16px 'Poppins', sans-serif;
+    }
+    
+    .sidebar-container__sub {
+      padding: 25px;
+    }
+  }
+
+  .sidebar-container_blog .sidebar-container__title {
+    cursor: pointer;
+    background: #40b2a1;
+  }
+
+  .sidebar-container_description {
+    .sidebar-container__title {
+      background: #b0a7ad;
+    }
+  
+    .description-text {
+      color: #666;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+  
+      strong {
+        color: #000;
+        font-size: 13px;
+      }
+
+      span {
+        font-size: 22px;
+        font-weight: 700;
+        display: inline-block;
+        .description-text__mark-start {
+          margin-right: 10px;
+        }
+        .description-text__mark-end {
+          transform: rotate(180deg);
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
 }

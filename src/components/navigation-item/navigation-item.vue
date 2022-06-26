@@ -3,7 +3,7 @@
   @click="routePage(navigation_current_item.display)"
   :class="{ active: itemActive(navigation_current_item.display) }"
 )
-  <img :src="  require('../../images/' + navigation_current_item.img) " alt="img">
+  img( :src="  require('../../images/' + navigation_current_item.img) " alt="img")
   p="{{navigation_current_item.name}}"
 </template>
  
@@ -12,9 +12,11 @@
 <script>
 
 export default {
+
   props: {
     navigation_current_item: {}
   },
+
   methods: {
     routePage (pageName) {
       this.$router.push("/" + pageName );
@@ -24,6 +26,7 @@ export default {
       return "/" + pageName == this.$route.fullPath? true : false;
     }
   },
+
 }
 
 </script> 

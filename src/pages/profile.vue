@@ -1,13 +1,13 @@
 <template lang="pug">
 .profile
-  h1= "Profile Page"
+  h1.main-title= "Profile Page"
+  img( src="../images/hedgehog.gif" alt="profile" )
 </template>
  
 <style lang="scss">
-h1 {
-  font-size: 20px
-}
+
+  .profile img {
+    margin-bottom: 30px;
+  }
+
 </style>
- 
-<script>
-</script>

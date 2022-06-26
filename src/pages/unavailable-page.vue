@@ -1,13 +1,13 @@
 <template lang="pug">
-.dashboard
-  h1= "This page is not available yet"
+.unavailable
+  h1.main-title= "This page is not available yet"
+  p.unavailable__text= "Sorry, but this page is not yet available for viewing."
 </template>
  
 <style lang="scss">
-h1 {
-  font-size: 20px
+
+.unavailable__text {
+  margin-bottom: 30px;
 }
+  
 </style>
- 
-<script>
-</script>

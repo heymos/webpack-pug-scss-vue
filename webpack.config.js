@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 
-  mode: "development",
+  mode: "production",
 
   entry: {
     index: path.resolve(__dirname, "src/index.js")
@@ -43,7 +43,7 @@ module.exports = {
         loader: "pug-plain-loader"
       },
       {
-        test: /\.(png|svg|jpg|jpeg|webp)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource"
       }
     ]

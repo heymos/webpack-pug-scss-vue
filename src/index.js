@@ -1,5 +1,5 @@
 const { createApp, h } = require('vue');
-import App from './app.vue';
+import App from './app/app.vue';
 import router from './router/router.js';
 import store from './store/store.js';
 
